@@ -15,7 +15,7 @@ export default function Projects() {
         {
           details.map((project)=>(
            <div className="w-80 bg-white rounded-xl shadow-lg overflow-hidden mt-5" key={project.id}>
-                                      <div className='w-full h-48 bg-yellow-300 flex items-center justify-center'>
+                                      <div className='w-full h-48 bg-lime-400 flex items-center justify-center'>
                                           <img
                                               src={project.image}
                                               alt="Project"

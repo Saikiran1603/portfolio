@@ -60,15 +60,15 @@ export default function Gallery() {
     },
   ]
   return (
-    <div className='p-3 md:p-5'>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4'>
-      <div className=' bg-gray-800 rounded-lg flex justify-center items-center aspect-[3/4] p-4 text-center'>
-        <h1 className='text-5xl font-bold text-white'>Gallery</h1>
+    <div className='bg-[#0f172a] min-h-screen p-3 md:p-5'>
+      <div className='columns-1 sm:columns-2 md:columns-3 lg-columns-4 gap-4 space-y-3'>
+      <div className=' break-inside-avoid bg-gray-900 border border-gray-8-- rounded-none flex justify-center items-center p-6mb-3 aspect-[3/1]'>
+        <h1 className='text-7xl font-black font-morganite text-white'>Gallery</h1>
       </div>
       {
         images.map((img)=>(
-          <div className='overflow-hidden rounded-lg aspect-[3/4]' key={img.id}>
-            <img src={img.image} alt="" className='w-full h-full object-cover hover:scale-105 transition-transform duration-300' />
+          <div className='break-inside-avoid group overflow-hidden rounded-lg ' key={img.id}>
+            <img src={img.image} alt="" className='w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300' />
           </div>
         ))
       }

@@ -4,10 +4,10 @@ export default function Contact() {
   return (
     <div>
       <div className='h-20 bg-gray-800 flex justify-center items-center rounded-lg mt-5 mb-5'>
-        <h1 className='text-5xl font-bold text-white'>Contact</h1>
+        <h1 className='text-7xl font-black font-morganite text-white'>Contact</h1>
       </div>
 
-      <div className='bg-yellow-300 p-1 md:flex justify-around md:p-5 rounded-lg mb-5'>
+      <div className='bg-lime-400 p-1 md:flex justify-around md:p-5 rounded-lg mb-5'>
         <div className='1/2 text-'>
           <h1 className='text-5xl font-bold'>Get In Touch</h1>
           <p className='py-2'>if you are interested in my work or want <br />
@@ -26,7 +26,7 @@ export default function Contact() {
 
           <label htmlFor="msg">Message</label>
           <textarea name="msg" id="msg" className='bg-white rounded-lg'></textarea>
-          <button type='submit' className='bg-black text-white rounded-lg mt-3 px-2 py-2'>Send</button>
+          <button type='submit' className='bg-black text-lime-400 rounded-lg mt-3 px-2 py-2'>Send</button>
         </form>
       </div>
     </div>
