@@ -11,7 +11,7 @@ export default function Home() {
     return (
         <div className='bg-black'>
             <div className='myName '>
-                <div className='text-lime-400 text-center '>
+                <div className='text-[#D5FF3F] text-center '>
                     <p className=' '>Hey There I'm</p>
                     <h1 className='text-6xl md:text-9xl lg:text-9xl font-black  font-morganite'>SAIKIRAN</h1>
                     <p>Currently working in a Stackly Company as a <br /> Frontend Developer</p>
@@ -22,7 +22,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className='bg-lime-400 p-10 rounded'>
+            <div className='bg-[#D5FF3F]  p-10 rounded'>
                 <h1 className='text-7xl font-black text-center pb-5 font-morganite'>About</h1>
                 <p >
                     My name is Sai Kiran, and I am a Frontend Developer with a strong interest in building responsive,
@@ -37,20 +37,20 @@ export default function Home() {
                     These projects helped me strengthen my understanding of React concepts, including components, hooks,
                     state management, routing, and API handling.
                 </p>
-                <button className='bg-black text-lime-400 pr-3 pl-3 px-1 py-1 rounded cursor-pointer mt-5'
+                <button className='bg-black text-[#D5FF3F] pr-3 pl-3 px-1 py-1 rounded cursor-pointer mt-5'
                     onClick={() => navigate("/about")} >More...</button>
             </div>
 
-            <div className='flex justify-between pl-10 pr-10 bg-gray-800 rounded mt-3 mb-3 px-5 py-5'>
-                <h1 className='text-white font-black text-7xl font-morganite'>Recent Projects</h1>
+            <div className='w-full flex justify-between pl-3 sm:pl-5 md:pl-5 lg:pl-5 pr-3 sm:pr-5 md:pr-5 lg:pr-5   bg-[#161B22] rounded mt-3 mb-3 px-5 py-5'>
+                <h1 className='text-white font-black  text-4xl  sm:text-5xl md:text-6xl lg:text-7xl font-morganite'>Recent Projects</h1>
                 <button className='text-white cursor-pointer' onClick={() => navigate("/projects")}>see all <FaArrowRight className='inline ' /></button>
             </div>
 
-            <div className='p-5  gap-5 md:flex justify-around lg:flex justify-around '>
+            <div className='p-5  gap-5 flex flex-col  md:flex-row lg:flex-row items-center md:flex justify-around lg:flex justify-around '>
                 {
                     projects.map((project) => (
-                        <div className="w-80 bg-white rounded-xl shadow-lg overflow-hidden mt-5" key={project.id}>
-                            <div className='w-full h-48 bg-lime-400 flex items-center justify-center'>
+                        <div className="w-full sm:w-80 md:w-96 lg:w-96 bg-white rounded-xl shadow-lg overflow-hidden mt-5" key={project.id}>
+                            <div className='w-full h-48 bg-[#D5FF3F] flex items-center justify-center'>
                                 <img
                                     src={project.image}
                                     alt="Project"
@@ -60,7 +60,7 @@ export default function Home() {
 
                             <div className="p-4">
                                 <h2 className="text-xl font-bold">{project.title}</h2>
-                                <p className='text-lime-400'>{project.role}</p>
+                                <p className='text-[#D5FF3F] '>{project.role}</p>
                                 <p className="text-gray-600 mt-2">
                                     {project.data}
                                 </p>
@@ -83,7 +83,7 @@ export default function Home() {
                 }
             </div>
 
-            <div className='bg-lime-400  md:flex justify-between p-5 rounded-lg mt-5 mb-5'>
+            <div className='bg-[#D5FF3F]  md:flex justify-between p-5 rounded-lg mt-5 mb-5'>
                 <div>
                     <h1 className='text-5xl font-bold'>Get In Touch</h1>
                     <p className='py-2'>if you are interested in my work or want <br />

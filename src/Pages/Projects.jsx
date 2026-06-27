@@ -8,14 +8,14 @@ export default function Projects() {
   const {details}=useContext(data)
   return (
     <div>
-      <div className='h-20 bg-gray-800 flex justify-center items-center rounded-lg'>
-        <h1 className='text-5xl font-bold text-white '>Projects</h1>
+      <div className='h-20 bg-[#161B22] flex justify-center items-center rounded-lg'>
+        <h1 className=' text-4xl  sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white '>Projects</h1>
       </div>
       <div className='flex flex-col items-center mb-5 md:grid grid-cols-3 place-items-center '>
         {
           details.map((project)=>(
-           <div className="w-80 bg-white rounded-xl shadow-lg overflow-hidden mt-5" key={project.id}>
-                                      <div className='w-full h-48 bg-lime-400 flex items-center justify-center'>
+           <div className="w-full sm:w-80 md:w-96 lg:w-96 bg-white rounded-xl shadow-lg overflow-hidden mt-5" key={project.id}>
+                                      <div className='w-full h-48 bg-[#D5FF3F]  flex items-center justify-center'>
                                           <img
                                               src={project.image}
                                               alt="Project"

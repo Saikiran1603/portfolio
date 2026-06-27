@@ -62,7 +62,7 @@ export default function Gallery() {
   return (
     <div className='bg-[#0f172a] min-h-screen p-3 md:p-5'>
       <div className='columns-1 sm:columns-2 md:columns-3 lg-columns-4 gap-4 space-y-3'>
-      <div className=' break-inside-avoid bg-gray-900 border border-gray-8-- rounded-none flex justify-center items-center p-6mb-3 aspect-[3/1]'>
+      <div className=' break-inside-avoid bg-[#161B22] border border-gray-8-- rounded-none flex justify-center items-center p-6mb-3 aspect-[3/1]'>
         <h1 className='text-7xl font-black font-morganite text-white'>Gallery</h1>
       </div>
       {

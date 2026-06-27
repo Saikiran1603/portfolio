@@ -1,5 +1,5 @@
 
-import React, { createContext } from 'react'
+import React, { createContext,useState } from 'react'
 import { BrowserRouter,  NavLink, Route, Routes } from 'react-router-dom'
 import Home from './Pages/Home'
 import About from './Pages/About'
@@ -7,9 +7,10 @@ import Projects from './Pages/Projects'
 import Gallery from './Pages/Gallery'
 import Contact from './Pages/Contact'
 import ProjectDetails from './Components/ProjectDetails'
- 
+ import {FaBars,FaTimes } from "react-icons/fa";
 export const data=createContext()
 export default function App() {
+  const [open, setOpen]=useState(false);
   const details=[{
     id:1,
     image:"/frontend.png",
@@ -70,17 +71,38 @@ export default function App() {
 ]
 
   return (
-    < div className='bg-black'>
+      <div className='bg-black'>
        <BrowserRouter >
        <data.Provider value={{details}}>
-       <div className='flex gap-7 md:gap-15 lg:gap-20 justify-center flex-wrap h-1/4 pt-5 pb-5 bg-black'>
-         <NavLink to={"/"} className={({isActive})=>isActive?"text-lime-400":"text-white" }>Home</NavLink>
-        <NavLink to={"/about"} className={({isActive})=>isActive?"text-lime-400":"text-white"}>About</NavLink>
-        <NavLink to={"/projects"} className={({isActive})=>isActive?"text-lime-400":"text-white"}>Projects</NavLink>
-        <NavLink to={"/gallery"} className={({isActive})=>isActive?"text-lime-400":"text-white"}>Gallery</NavLink>
-        <NavLink to={"/contact"} className={({isActive})=>isActive?"text-lime-400":"text-white"}>Contact</NavLink>
+       <div className='hidden sm:hidden md:flex lg:flex gap-7 md:gap-15 lg:gap-20 justify-center flex-wrap h-1/4 pt-5 pb-5 bg-black'>
+         <NavLink to={"/"} className={({isActive})=>isActive?"text-[#D5FF3F] ":"text-white" }>Home</NavLink>
+        <NavLink to={"/about"} className={({isActive})=>isActive?"text-[#D5FF3F] ":"text-white"}>About</NavLink>
+        <NavLink to={"/projects"} className={({isActive})=>isActive?"text-[#D5FF3F] ":"text-white"}>Projects</NavLink>
+        <NavLink to={"/gallery"} className={({isActive})=>isActive?"text-[#D5FF3F] ":"text-white"}>Gallery</NavLink>
+        <NavLink to={"/contact"} className={({isActive})=>isActive?"text-[#D5FF3F] ":"text-white"}>Contact</NavLink>
 
        </div>
+
+       <div>
+        <button className='text-white text-4xl p-2 md:hidden lg:hidden ' onClick={()=>setOpen(!open)}>
+          {open ? <FaTimes /> : <FaBars />}
+        </button>
+       </div>
+
+       {
+        open && (
+          <div className='md:hidden lg:hidden bg-black p-5 flex flex-col gap-5 text-center'>
+            <NavLink to={"/"} className={({isActive})=>isActive?"text-[#D5FF3F] ":"text-white" } onClick={()=>setOpen(false)}>Home</NavLink>
+            <NavLink to={"/about"} className={({isActive})=>isActive?"text-[#D5FF3F] ":"text-white"} onClick={()=>setOpen(false)}>About</NavLink>
+            <NavLink to={"/projects"} className={({isActive})=>isActive?"text-[#D5FF3F] ":"text-white"} onClick={()=>setOpen(false)}>Projects</NavLink>
+            <NavLink to={"/gallery"} className={({isActive})=>isActive?"text-[#D5FF3F] ":"text-white"} onClick={()=>setOpen(false)}>Gallery</NavLink>
+            <NavLink to={"/contact"} className={({isActive})=>isActive?"text-[#D5FF3F] ":"text-white"} onClick={()=>setOpen(false)}>Contact</NavLink>
+          </div>
+        )
+       }
+
+
+
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/about' element={<About/>}/>
@@ -90,16 +112,16 @@ export default function App() {
           <Route path='/details/:id' element={<ProjectDetails/>}/>
         </Routes>
         
-       <footer className="py-10 text-center border-t bg-gray-800 flex flex-wrap gap-10 justify-around rounded-t">
+       <footer className="w-full sm:w-full md:w-full lg:w-full py-10 text-center border-t bg-gray-800 flex flex-wrap gap-10 justify-around rounded-t">
        
-<div className="font-black text-8xl text-lime-400">
+<div className="w-full sm:w-auto md:w-auto lg:w-auto font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#D5FF3F]">
   <span className="text-black">&lt;</span>
   SK
   <span className="text-black">/&gt;</span>
 </div>
 
-<div>
-  <h2 className="text-9xl font-bold text-gray-500 font-morganite   ">Let's Build <br/> Something <span className='text-lime-400 text-9xl'> Amazing </span></h2>
+<div className="w-full sm:w-auto md:w-auto lg:w-auto ">
+  <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-500 font-morganite   ">Let's Build <br/> Something <span className='text-[#D5FF3F] text-4xl sm:text-5xl md:text-6xl lg:text-7xl'> Amazing </span></h2>
   {/* <p className="mt-2">
     Passionate Frontend Developer creating responsive and user-friendly web applications.
   </p> */}
