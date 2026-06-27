@@ -50,7 +50,7 @@ export default function Home() {
                 {
                     projects.map((project) => (
                         <div className="w-full sm:w-80 md:w-96 lg:w-96 bg-white rounded-xl shadow-lg overflow-hidden mt-5" key={project.id}>
-                            <div className='w-full h-48 bg-[#D5FF3F] flex items-center justify-center'>
+                            <div className='w-full h-48 bg-[#161B22] flex items-center justify-center'>
                                 <img
                                     src={project.image}
                                     alt="Project"
